@@ -21,22 +21,37 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.17.0/gradio.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
     integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.onload = function () {
+      function handleLoadComplete() {
+        console.log("Embedded space has finished loading");
+        const examplesList = document.getElementById('examples-link');
+        examplesList.style.display = 'block';
+      }
+
+      const gradioApp = document.querySelector("gradio-app");
+      gradioApp.addEventListener("render", handleLoadComplete);
+    }
+  </script>
+
 </head>
 
 <body>
 
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true"></span>
@@ -65,7 +80,7 @@
       </div>
 
     </div>
-  </nav>
+  </nav> -->
 
 
   <section class="hero">
@@ -73,15 +88,27 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">HoloGen stuff</h1>
+            <h1 class="title is-1 publication-title">Collaborative Control for Normal-Conditioned PBR Image Generation
+            </h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <!-- <a href="https://unity.com">Shimon Vainer</a><sup>1</sup>,</span> -->
-                
+              <span class="author-block">Shimon Vainer<sup>1,*</sup>,</span>
+              <span class="author-block">Mark Boss<sup>2,†</sup>,</span>
+              <span class="author-block">Mathias Parger<sup>1</sup>,</span>
+              <span class="author-block">Konstantin Kutsy<sup>1</sup>,</span>
+              <span class="author-block">Dante De Nigris<sup>1</sup>,</span>
+              <span class="author-block">Ciara Rowles<sup>1</sup>,</span>
+              <span class="author-block">Nicolas Perony<sup>1</sup>,</span>
+              <span class="author-block">Simon Donné<sup>1,*</sup>,</span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-8 publication-authors">
               <span class="author-block"><sup>1</sup>Unity</span>
+              <span class="author-block"><sup>2</sup>Stability AI</span>
+            </div>
+
+            <div class="is-size-8 publication-authors">
+              <span class="author-block"><sup>*</sup>Equal Contributions</span>
+              <span class="author-block"><sup>†</sup>Core Technical Contributions</span>
             </div>
 
             <div class="column has-text-centered">
@@ -134,7 +161,8 @@
       <div class="hero-body">
         <img id="teaser" height="100%" src="./static/images/teaser.jpg">
         <h2 class="subtitle has-text-centered">
-          Unveiling the Unorthodox: A Paradigm Shift in Stuff-Doing Through Ubiquitous Resource Reimagination
+          By tightly linking the PBR diffusion model with a frozen RGB model, we produce high-quality PBR images
+          conditioned on geometry and prompts
         </h2>
       </div>
     </div>
@@ -153,13 +181,14 @@
               Modern graphics pipelines, however, require <b>physically-based rendering (PBR)</b> material properties.
               We propose to model the PBR image distribution directly, sidestepping photometric inaccuracies in RGB
               generation and the inherent ambiguity in extracting PBR from RGB. <br><br>
-              
+
               Existing approaches leveraging cross-modal finetuning are limited by the lack of data on one hand and the
               high dimensionality of the output modalities on the other: we overcome both challenges by keeping a frozen
               RGB model and tightly linking a newly trained PBR model using a novel cross-network communication
               paradigm. <br><br>
               As the base RGB model is fully frozen, the proposed method does not risk catastrophic forgetting during
-              finetuning and remains compatible with techniques such as <a href="https://ip-adapter.github.io/">IPAdapter</a>
+              finetuning and remains compatible with techniques such as <a
+                href="https://ip-adapter.github.io/">IPAdapter</a>
               pretrained for the base RGB model. <br><br>
               We validate our design choices, robustness to data sparsity, and compare against existing paradigms with
               an extensive experimental section.
@@ -174,70 +203,51 @@
     <div class="container is-max-desktop">
 
       <div class="columns is-centered">
-        <!-- Slumbering Resources. -->
         <div class="column">
-          <div class="content">
-            <h2 class="title is-3">Slumbering Resources</h2>
-            <p>
-              But how, you ask, do we coax these slumbering resources into action?
-              Through the magic of what we call Resourceful Reimagination.
-              This nebulous yet potent process involves a potent cocktail of intuition, serendipity,
-              and a healthy dose of "why-not-see-what-sticks?".
-              Imagine: a spatula transformed into a paintbrush,
-              a discarded coffee can repurposed as a signal amplifier,
-              a rogue button on a mismatched sock (again!) becoming...
-              well, that part remains delightfully open to interpretation.
-            </p>
-          </div>
-        </div>
-        <!--/ Slumbering Resources. -->
-
-        <!-- Inherent Elusiveness. -->
-        <div class="column">
-          <h2 class="title is-3">Inherent Elusiveness</h2>
+          <h2 class="title is-3">Learning PBR Materials</h2>
           <div class="columns is-centered">
             <div class="column content">
+
               <p>
-                The beauty of our method lies in its inherent elusiveness.
-                Unlike the rigid constraints of traditional stuff-doing, Resourceful Reimagination thrives on ambiguity.
-                We offer no step-by-step blueprints, no pre-defined parameters.
-                Instead, we empower the individual to embark on a personal journey of stuff-doing exploration,
-                armed only with their imagination and a willingness to embrace the unconventional.
+                In this work, we aim to repurpose a frozen RGB network that has seen billions of images (Stable Diffusion) to also 
+                learn to generate PBR material maps. We devise a scheme in which a <b>frozen</b> network is communicating bi-directionally with 
+                a trainable copy, synchronizing at every layer of both networks (<b>Collaborative Control</b>).
+
+                In addition to the Cook-Torrance material properties (albedo, roughness, and metallic), we also generate a <a
+                href="https://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/">normal
+                map</a>.
+                <br>
+                Normal maps are typically defined in a tangent space based on an arbitrary
+                UV-unwrapping - hence
+                entangling this surface property with the arbitrary UV mapping of the mesh. Instead, we propose to predict the normal
+                map defined in a tangent space based solely on the object geometry, disentangling the texture from the UV mapping.
               </p>
             </div>
-
           </div>
-        </div>
-      </div>
-      <!--/ Inherent Elusiveness. -->
+          <!--/ Inherent Elusiveness. -->
 
-      <!-- The Implications. -->
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">The Implications</h2>
+          <!-- Gradio Demo -->
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <h2 class="title is-3">Interactive Demonstration</h2>
 
-          <!-- Uncharted Territory. -->
-          <h3 class="title is-4">Uncharted Territory</h3>
-          <div class="content has-text-justified">
-            <p>
-              The implications of this paradigm shift are as vast as the uncharted territory itself.
-              Imagine a world where limitations dissolve, replaced by the boundless potential of the what-if.
-              A world where the answer to "how do I do this stuff?" is no longer a frustrating void,
-              but an exhilarating invitation to unleash the creative maelstrom within.
-            </p>
+              <div class="content has-text-justified">
+                <p>
+                  We provide an interactive demonstration of our method using <a
+                    href="https://www.gradio.app/">Gradio</a>.
+                  You can try out our method with your own meshes and prompts and see the results in real-time.
+                  <br> </br>
+                  <b><span id="examples-link">Example meshes are provided <a href="#examples">below</a>.</span></b>
+                </p>
+                <gradio-app src="https://eccv-gradio.holo-azure.internal.unity.com/"></gradio-app>
+              </div>
+            </div>
           </div>
-          <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.17.0/gradio.js"></script>
-
-          <gradio-app src="https://bostadynamics-pubtest.hf.space"></gradio-app>
-          <!--/ Uncharted Territory. -->
-
-        </div>
-      </div>
-      <!--/ The Implications. -->
+          <!--/ Gradio Demo -->
 
 
-      <!-- Concurrent Work. -->
-      <div class="columns is-centered">
+          <!-- Concurrent Work. -->
+          <!-- <div class="columns is-centered">
         <div class="column is-full-width">
           <h2 class="title is-3">Related Links</h2>
 
@@ -262,10 +272,10 @@
 
           </div>
         </div>
-      </div>
-      <!--/ Concurrent Work. -->
+      </div> -->
+          <!--/ Concurrent Work. -->
 
-    </div>
+        </div>
   </section>
 
 
@@ -273,10 +283,11 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{,
-  author    = {},
-  title     = {HoloGen},
-  journal   = {SSSI},
-  year      = {2021},
+  author    = {Vainer, Shimon and Boss, Mark and Parger, Mathias and Kutsy, Konstantin and 
+               De Nigris, Dante and Rowles, Ciara and Perony, Nicolas and Donn\'e, Simon},
+  title     = {Collaborative Control for Geometry-Conditioned PBR Image Generation},
+  journal   = {arXiv preprint arXiv:},
+  year      = {2024},
 }</code></pre>
     </div>
   </section>
@@ -301,14 +312,14 @@
               and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
             </p>
-            <p>
+            <!-- <p>
               This means you are free to borrow the <a href="https://github.com/holo-gen/holo-gen.github.io">source
                 code</a> of this website,
               we just ask that you link back to this page or the <a herf="nerfies.github.io">original page</a> in the
               footer.
               Please remember to remove the analytics code included in the header of the website which
               you do not want on your website.
-            </p>
+            </p> -->
           </div>
         </div>
       </div>
