@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content=">Collaborative Control for Normal-Conditioned PBR Image Generation">
+  <meta name="description" content="Collaborative Control for Normal-Conditioned PBR Image Generation">
   <meta name="keywords" content="Diffusion, PBR, Unity Research, HoloGEN">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>>Collaborative Control for Normal-Conditioned PBR Image Generation</title>
+  <title>Collaborative Control for Normal-Conditioned PBR Image Generation</title>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H14X11KDK5"></script>
@@ -204,26 +204,29 @@
 
       <div class="columns is-centered">
         <div class="column">
-          <h2 class="title is-3">Learning PBR Materials</h2>
+          <!-- <h2 class="title is-3">Learning PBR Materials</h2>
           <div class="columns is-centered">
             <div class="column content">
 
               <p>
-                In this work, we aim to repurpose a frozen RGB network that has seen billions of images (Stable Diffusion) to also 
-                learn to generate PBR material maps. We devise a scheme in which a <b>frozen</b> network is communicating bi-directionally with 
-                a trainable copy, synchronizing at every layer of both networks (<b>Collaborative Control</b>).
-
-                In addition to the Cook-Torrance material properties (albedo, roughness, and metallic), we also generate a <a
-                href="https://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/">normal
-                map</a>.
+                In this work, we aim to repurpose a generative RGB network that has been trained on natural images (Stable
+                Diffusion) generate PBR material maps. We devise a scheme in which a <b>frozen</b> RGB network is
+                communicating bi-directionally with
+                a trainable copy, synchronizing at every layer of both networks (<b>Collaborative Control</b>). 
                 <br>
-                Normal maps are typically defined in a tangent space based on an arbitrary
-                UV-unwrapping - hence
-                entangling this surface property with the arbitrary UV mapping of the mesh. Instead, we propose to predict the normal
-                map defined in a tangent space based solely on the object geometry, disentangling the texture from the UV mapping.
+              </p>
+              <p></p>
+                In addition to the Cook-Torrance material properties (albedo, roughness, and metallic), we also generate
+                a <a href="https://www.opengl-tutorial.org/intermediate-tutorials/tutorial-13-normal-mapping/">normal
+                  map</a>.
+                Normal maps are typically defined in a tangent space based on an arbitrary UV-unwrapping - hence
+                entangling this surface property with the arbitrary UV mapping of the mesh. Instead, we propose to
+                predict the normal
+                map defined in a <i>different</i> tangent space based solely on the object geometry, disentangling the texture from the
+                UV mapping. 
               </p>
             </div>
-          </div>
+          </div> -->
           <!--/ Inherent Elusiveness. -->
 
           <!-- Gradio Demo -->
