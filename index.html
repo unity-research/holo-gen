@@ -115,7 +115,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <a href="static/paper_parts/paper.pdf" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -123,11 +123,20 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a class="external-link button is-normal is-rounded is-dark" disabled>
+                  <a href="static/paper_parts/supp.pdf" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                    <span>Supplementary</span>
+                      <span>Supplementary</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="static/paper_parts/supp_compressed.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary (Compressed) </span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -207,19 +216,12 @@
             <div class="column is-full-width">
               <h2 class="title is-3">Overview</h2>
               <div class="content has-text-justified">
-                <figure class="image">
-                  <img src="static/images/captured/lock.png">
-                  <figcaption>"A wooden chest with a steel lock"</figcaption>
-                </figure>
-
-                <figure class="image">
-                  <img src="static/images/captured/cobblestone.png">
-                  <figcaption>The model generalizes to 2D exemplars even though the dataset does not contain any. The condition normal map is constant \(z=1\)</figcaption>
-                </figure>
                 
+                <h3> Method </h4>
                 <figure class="image">
                   <img src="static/images/fig/unet.jpg">
-                  <figcaption>We establish a bidirectional Collaborative Control mechanism between the blue network (pre-trained Stable Diffusion) and the yellow one (PBR network)</figcaption>
+                  <figcaption>We establish a bidirectional Collaborative Control mechanism between the blue network
+                    (pre-trained Stable Diffusion) and the yellow one (PBR network)</figcaption>
                 </figure>
 
                 <figure class="image">
@@ -227,6 +229,35 @@
                   <figcaption>Zooming in on a single Collaborative Control transformer block </figcaption>
                 </figure>
 
+                <h3> Plug & Play </h3>
+
+                <figure class="image">
+                  <img src="static/images/fig/control.jpg">
+                </figure> 
+
+                <p>
+                  Since our method keeps the RGB model frozen, it is compatible with any control method in a plug & play fashion.
+                  We have experimented with IP-Adapter, but in the same way, it can be used with any other control method (T2I Adapter, ControlNet, etc.).
+                  <br>
+                  This feature vastly expands the usability of our method in practical scenarios.
+                </p>
+
+                <h3> Examples </h4>
+
+                <figure class="image">
+                  <img src="static/images/captured/lock.png">
+                  <figcaption>"A wooden chest with a steel lock"</figcaption>
+                </figure>
+
+                <figure class="image">
+                  <img src="static/images/captured/cobblestone.png">
+                  <figcaption>The model generalizes to 2D exemplars even though the dataset does not contain any. The
+                    condition normal map is constant \(z=1\)</figcaption>
+                </figure>
+
+                <figure class="image">
+                  <img src="static/images/fig/ipadapter.jpg">
+                <figcaption>An example of our method combined with another controlling network (IP-Adapter)</figcaption>
                 <!-- <article class="message is-warning">
                   <div class="message-header">
                     <p>TBD</p>
