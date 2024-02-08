@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Holo.">
+  <meta name="description" content="Holo.">
   <meta name="keywords" content="HoloGen, Gen3D, PBR">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HoloGEN</title>
@@ -12,311 +12,318 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H14X11KDK5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-H14X11KDK5');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://unity.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://unity.com">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
         </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://holo-gen.github.io">
-            TBA
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
           </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://holo-gen.github.io">
+              TBA
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">HoloGen stuff</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://unity.com">Shimon Vainer</a><sup>1</sup>,</span>
+
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Unity</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/PLACEHOLDER" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/PLACEHOLDER" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
+  <section class="hero teaser">
     <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img id="teaser" height="100%" src="./static/images/teaser.jpg">
+        <h2 class="subtitle has-text-centered">
+          Unveiling the Unorthodox: A Paradigm Shift in Stuff-Doing Through Ubiquitous Resource Reimagination
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Current 3D content generation leverages generative RGB
+              image models, while downstream graphics pipelines require 
+              physically-based rendering <b>(PBR)</b> material properties, requiring an inverse rendering step. 
+              
+              We instead propose to model the PBR image distribution directly,
+              sidestepping both photometric inconsistencies in the generation and the
+              inherent ambiguity in inverse rendering.
+
+              Existing approaches such as cross-modal finetuning or sequential condi-
+              tional generation are limited by the lack of data on one hand and the high
+              dimensionality of the output modalities on the other: we overcome both
+              challenges by keeping a <b>frozen RGB model</b> and tightly linking a newly
+              trained PBR model using a novel cross-network communication paradigm.
+              
+              As the base RGB model is <b>fully frozen</b>, the proposed method does not risk
+              catastrophic forgetting during finetuning and remains compatible with
+              techniques such as <a href="https://ip-adapter.github.io/">IPAdapter</a> pretrained for the base RGB model.
+              We validate our design choices, robustness to data sparsity, and compare
+              against existing paradigms with an extensive experimental section.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=swzj7HY_Qiquf-v_" frameborder="0"
+              allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
       <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">HoloGen stuff</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://unity.com">Shimon Vainer</a><sup>1</sup>,</span>
-
+        <!-- Slumbering Resources. -->
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3">Slumbering Resources</h2>
+            <p>
+              But how, you ask, do we coax these slumbering resources into action?
+              Through the magic of what we call Resourceful Reimagination.
+              This nebulous yet potent process involves a potent cocktail of intuition, serendipity,
+              and a healthy dose of "why-not-see-what-sticks?".
+              Imagine: a spatula transformed into a paintbrush,
+              a discarded coffee can repurposed as a signal amplifier,
+              a rogue button on a mismatched sock (again!) becoming...
+              well, that part remains delightfully open to interpretation.
+            </p>
           </div>
+        </div>
+        <!--/ Slumbering Resources. -->
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Unity</span>
-          </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/PLACEHOLDER"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/PLACEHOLDER"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
+        <!-- Inherent Elusiveness. -->
+        <div class="column">
+          <h2 class="title is-3">Inherent Elusiveness</h2>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+                The beauty of our method lies in its inherent elusiveness.
+                Unlike the rigid constraints of traditional stuff-doing, Resourceful Reimagination thrives on ambiguity.
+                We offer no step-by-step blueprints, no pre-defined parameters.
+                Instead, we empower the individual to embark on a personal journey of stuff-doing exploration,
+                armed only with their imagination and a willingness to embrace the unconventional.
+              </p>
             </div>
 
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+      <!--/ Inherent Elusiveness. -->
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img id="teaser" height="100%" src="./static/images/teaser.jpg">
-      <h2 class="subtitle has-text-centered">
-        Unveiling the Unorthodox: A Paradigm Shift in Stuff-Doing Through Ubiquitous Resource Reimagination
-      </h2>
-    </div>
-  </div>
-</section>
+      <!-- The Implications. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">The Implications</h2>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            In the hallowed halls of human endeavor, 
-            the act of "doing stuff" has long adhered to established methodologies,
-            its tools and processes neatly compartmentalized. 
-            Yet, what if the key to unlocking new avenues of stuff-domination lay not in the conventional, 
-            but in the realm of the unconventional, the unexplored, the delightfully non-standard? 
-            This paper dares to venture into this uncharted territory, 
-            presenting the first-ever method capable of revolutionizing the very fabric of stuff-doing.
-          </p>
-          <p>
-            Our revolutionary approach hinges on a seemingly paradoxical principle: the power of the ubiquitous. 
-            We posit that the "stuff" required for this paradigm shift isn't confined to the sterile aisles of specialized stores, 
-            but rather, lies dormant within the everyday objects that surround us. 
-            A mismatched sock? A rogue button? A rogue button on a mismatched sock? 
-            These, dear reader, are not mere detritus, but the hidden building blocks of a stuff-doing odyssey!
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=swzj7HY_Qiquf-v_"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <!-- Slumbering Resources. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Slumbering Resources</h2>
-          <p>
-            But how, you ask, do we coax these slumbering resources into action? 
-            Through the magic of what we call Resourceful Reimagination. 
-            This nebulous yet potent process involves a potent cocktail of intuition, serendipity, 
-            and a healthy dose of "why-not-see-what-sticks?". 
-            Imagine: a spatula transformed into a paintbrush, 
-            a discarded coffee can repurposed as a signal amplifier, 
-            a rogue button on a mismatched sock (again!) becoming... 
-            well, that part remains delightfully open to interpretation.
-          </p>
-        </div>
-      </div>
-      <!--/ Slumbering Resources. -->
-
-      <!-- Inherent Elusiveness. -->
-      <div class="column">
-        <h2 class="title is-3">Inherent Elusiveness</h2>
-        <div class="columns is-centered">
-          <div class="column content">
+          <!-- Uncharted Territory. -->
+          <h3 class="title is-4">Uncharted Territory</h3>
+          <div class="content has-text-justified">
             <p>
-              The beauty of our method lies in its inherent elusiveness. 
-              Unlike the rigid constraints of traditional stuff-doing, Resourceful Reimagination thrives on ambiguity. 
-              We offer no step-by-step blueprints, no pre-defined parameters. 
-              Instead, we empower the individual to embark on a personal journey of stuff-doing exploration, 
-              armed only with their imagination and a willingness to embrace the unconventional.
+              The implications of this paradigm shift are as vast as the uncharted territory itself.
+              Imagine a world where limitations dissolve, replaced by the boundless potential of the what-if.
+              A world where the answer to "how do I do this stuff?" is no longer a frustrating void,
+              but an exhilarating invitation to unleash the creative maelstrom within.
             </p>
           </div>
+          <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.17.0/gradio.js"></script>
+
+          <gradio-app src="https://bostadynamics-pubtest.hf.space"></gradio-app>
+          <!--/ Uncharted Territory. -->
 
         </div>
       </div>
-    </div>
-    <!--/ Inherent Elusiveness. -->
-
-    <!-- The Implications. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">The Implications</h2>
-
-        <!-- Uncharted Territory. -->
-        <h3 class="title is-4">Uncharted Territory</h3>
-        <div class="content has-text-justified">
-          <p>
-            The implications of this paradigm shift are as vast as the uncharted territory itself. 
-            Imagine a world where limitations dissolve, replaced by the boundless potential of the what-if. 
-            A world where the answer to "how do I do this stuff?" is no longer a frustrating void, 
-            but an exhilarating invitation to unleash the creative maelstrom within.
-          </p>
-        </div>
-        <script
-	        type="module"
-	        src="https://gradio.s3-us-west-2.amazonaws.com/4.17.0/gradio.js"
-        ></script>
-
-        <gradio-app src="https://bostadynamics-pubtest.hf.space"></gradio-app>
-        <!--/ Uncharted Territory. -->
-
-      </div>
-    </div>
-    <!--/ The Implications. -->
+      <!--/ The Implications. -->
 
 
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Related Links</h2>
 
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://holo-gen.github.io">Unveiling the Unseen:</a> Untapped Potential in the Mundane.
-          </p>
-          <p>
-            <a href="https://holo-gen.github.io">Beyond the Obvious</a> and <a href="https://holo-gen.github.io">Symphony of Serendipity</a>
-            both are orchestrating Innovation with Improvisation.
-          </p>
-          <p>
-            Some are Embracing the Power of Resourceful Reimagination, such as <a href="https://holo-gen.github.io">Deconstructing Convention</a>, <a href="https://holo-gen.github.io">Ode to the Unorthodox</a>, and <a href="https://holo-gen.github.io">Beyond Duct Tape</a>
-          </p>
+          <div class="content has-text-justified">
+            <p>
+              There's a lot of excellent work that was introduced around the same time as ours.
+            </p>
+            <p>
+              <a href="https://holo-gen.github.io">Unveiling the Unseen:</a> Untapped Potential in the Mundane.
+            </p>
+            <p>
+              <a href="https://holo-gen.github.io">Beyond the Obvious</a> and <a
+                href="https://holo-gen.github.io">Symphony of Serendipity</a>
+              both are orchestrating Innovation with Improvisation.
+            </p>
+            <p>
+              Some are Embracing the Power of Resourceful Reimagination, such as <a
+                href="https://holo-gen.github.io">Deconstructing Convention</a>, <a
+                href="https://holo-gen.github.io">Ode to the Unorthodox</a>, and <a
+                href="https://holo-gen.github.io">Beyond Duct Tape</a>
+            </p>
 
+          </div>
         </div>
       </div>
+      <!--/ Concurrent Work. -->
+
     </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
+  </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{,
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{,
   author    = {},
   title     = {HoloGen},
   journal   = {SSSI},
   year      = {2021},
 }</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies.github.io source code</a> 
-            and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a href="https://github.com/holo-gen/holo-gen.github.io">source code</a> of this website,
-            we just ask that you link back to this page or the <a herf="nerfies.github.io">original page</a> in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+          <i class="fas fa-file-pdf"></i>
+        </a>
+        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies.github.io source
+                code</a>
+              and is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              This means you are free to borrow the <a href="https://github.com/holo-gen/holo-gen.github.io">source
+                code</a> of this website,
+              we just ask that you link back to this page or the <a herf="nerfies.github.io">original page</a> in the
+              footer.
+              Please remember to remove the analytics code included in the header of the website which
+              you do not want on your website.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
