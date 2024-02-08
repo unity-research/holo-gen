@@ -27,8 +27,9 @@
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+    integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -87,7 +88,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/PLACEHOLDER" class="external-link button is-normal is-rounded is-dark">
+                  <a class="external-link button is-normal is-rounded is-dark" disabled>
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -95,7 +96,15 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/PLACEHOLDER" class="external-link button is-normal is-rounded is-dark">
+                  <a class="external-link button is-normal is-rounded is-dark" disabled>
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a class="external-link button is-normal is-rounded is-dark" disabled>
                     <span class="icon">
                       <i class="ai ai-arxiv"></i>
                     </span>
@@ -103,14 +112,14 @@
                   </a>
                 </span>
                 <!-- Video Link. -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
                     </span>
                     <span>Video</span>
                   </a>
-                </span>
+                </span> -->
               </div>
 
             </div>
@@ -140,43 +149,25 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Current 3D content generation leverages generative RGB
-              image models, while downstream graphics pipelines require 
-              physically-based rendering <b>(PBR)</b> material properties, requiring an inverse rendering step. 
+              Current 3D content generation builds on generative image models that output RGB only.
+              Modern graphics pipelines, however, require <b>physically-based rendering (PBR)</b> material properties.
+              We propose to model the PBR image distribution directly, sidestepping photometric inaccuracies in RGB
+              generation and the inherent ambiguity in extracting PBR from RGB. <br><br>
               
-              We instead propose to model the PBR image distribution directly,
-              sidestepping both photometric inconsistencies in the generation and the
-              inherent ambiguity in inverse rendering.
-
-              Existing approaches such as cross-modal finetuning or sequential condi-
-              tional generation are limited by the lack of data on one hand and the high
-              dimensionality of the output modalities on the other: we overcome both
-              challenges by keeping a <b>frozen RGB model</b> and tightly linking a newly
-              trained PBR model using a novel cross-network communication paradigm.
-              
-              As the base RGB model is <b>fully frozen</b>, the proposed method does not risk
-              catastrophic forgetting during finetuning and remains compatible with
-              techniques such as <a href="https://ip-adapter.github.io/">IPAdapter</a> pretrained for the base RGB model.
-              We validate our design choices, robustness to data sparsity, and compare
-              against existing paradigms with an extensive experimental section.
+              Existing approaches leveraging cross-modal finetuning are limited by the lack of data on one hand and the
+              high dimensionality of the output modalities on the other: we overcome both challenges by keeping a frozen
+              RGB model and tightly linking a newly trained PBR model using a novel cross-network communication
+              paradigm. <br><br>
+              As the base RGB model is fully frozen, the proposed method does not risk catastrophic forgetting during
+              finetuning and remains compatible with techniques such as <a href="https://ip-adapter.github.io/">IPAdapter</a>
+              pretrained for the base RGB model. <br><br>
+              We validate our design choices, robustness to data sparsity, and compare against existing paradigms with
+              an extensive experimental section.
             </p>
           </div>
         </div>
       </div>
       <!--/ Abstract. -->
-
-      <!-- Paper video. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Video</h2>
-          <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ?si=swzj7HY_Qiquf-v_" frameborder="0"
-              allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-      <!--/ Paper video. -->
-    </div>
   </section>
 
   <section class="section">
