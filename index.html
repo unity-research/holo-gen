@@ -115,7 +115,8 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/unity-research/holo-gen/releases/download/paper/paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/unity-research/holo-gen/releases/download/paper/paper.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
@@ -123,11 +124,12 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://github.com/unity-research/holo-gen/releases/download/paper/supp.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/unity-research/holo-gen/releases/download/paper/supp.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                     </span>
-                      <span>Supplementary</span>
+                    <span>Supplementary</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -216,49 +218,53 @@
             <div class="column is-full-width">
               <h2 class="title is-3">Overview</h2>
               <div class="content has-text-justified">
-                
+
                 <h3> Method </h4>
-                <figure class="image">
-                  <img src="static/images/fig/unet.jpg">
-                  <figcaption>We establish a bidirectional Collaborative Control mechanism between the blue network
-                    (pre-trained Stable Diffusion) and the yellow one (PBR network)</figcaption>
-                </figure>
+                  <figure class="image">
+                    <img src="static/images/fig/unet.jpg">
+                    <figcaption>We establish a bidirectional Collaborative Control mechanism between the blue network
+                      (pre-trained Stable Diffusion) and the yellow one (PBR network)</figcaption>
+                  </figure>
 
-                <figure class="image">
-                  <img src="static/images/fig/crosscom.jpg">
-                  <figcaption>Zooming in on a single Collaborative Control transformer block </figcaption>
-                </figure>
+                  <figure class="image">
+                    <img src="static/images/fig/crosscom.jpg">
+                    <figcaption>Zooming in on a single Collaborative Control transformer block </figcaption>
+                  </figure>
 
-                <h3> Plug & Play </h3>
+                  <h3> Plug & Play </h3>
 
-                <figure class="image">
-                  <img src="static/images/fig/control.jpg">
-                </figure> 
+                  <figure class="image">
+                    <img src="static/images/fig/control.jpg">
+                  </figure>
 
-                <p>
-                  Since our method keeps the RGB model frozen, it is compatible with any control method in a plug & play fashion.
-                  We have experimented with IP-Adapter, but in the same way, it can be used with any other control method (T2I Adapter, ControlNet, etc.).
-                  <br>
-                  This feature vastly expands the usability of our method in practical scenarios.
-                </p>
+                  <p>
+                    Since our method keeps the RGB model frozen, it is compatible with any control method in a plug &
+                    play fashion.
+                    We have experimented with IP-Adapter, but in the same way, it can be used with any other control
+                    method (T2I Adapter, ControlNet, etc.).
+                    <br>
+                    This feature vastly expands the usability of our method in practical scenarios.
+                  </p>
 
-                <h3> Examples </h4>
+                  <h3> Examples </h4>
 
-                <figure class="image">
-                  <img src="static/images/captured/lock.png">
-                  <figcaption>"A wooden chest with a steel lock"</figcaption>
-                </figure>
+                    <figure class="image">
+                      <img src="static/images/captured/lock.png">
+                      <figcaption>"A wooden chest with a steel lock"</figcaption>
+                    </figure>
 
-                <figure class="image">
-                  <img src="static/images/captured/cobblestone.png">
-                  <figcaption>The model generalizes to 2D exemplars even though the dataset does not contain any. The
-                    condition normal map is constant \(z=1\)</figcaption>
-                </figure>
+                    <figure class="image">
+                      <img src="static/images/captured/cobblestone.png">
+                      <figcaption>The model generalizes to 2D exemplars even though the dataset does not contain any.
+                        The
+                        condition normal map is constant \(z=1\)</figcaption>
+                    </figure>
 
-                <figure class="image">
-                  <img src="static/images/fig/ipadapter.jpg">
-                <figcaption>An example of our method combined with another controlling network (IP-Adapter)</figcaption>
-                <!-- <article class="message is-warning">
+                    <figure class="image">
+                      <img src="static/images/fig/ipadapter.jpg">
+                      <figcaption>An example of our method combined with another controlling network (IP-Adapter)
+                      </figcaption>
+                      <!-- <article class="message is-warning">
                   <div class="message-header">
                     <p>TBD</p>
                   </div>
@@ -310,6 +316,7 @@
   </section>
 
 
+
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -328,6 +335,20 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+          <h3 class="title is-5">Example objects credits:</h3>
+          <ul>
+            <li><strong>antique_movie_camera</strong> - <a href="https://sketchfab.com/zeps9001">Janis Zeps</a></li>
+            <li><strong>cannon</strong> - <a
+                href="https://sketchfab.com/3d-models/cannon-0ab86bc4619b4e9196e954285102fed9">Marek_Grz</a></li>
+            <li><strong>hut</strong> - <a
+                href="https://sketchfab.com/3d-models/native-house-or-building-e-72cadebd7562453ea12e6fbef7e1df12">BytesCrafter</a>
+            </li>
+            <li><strong>chest</strong> - <a
+                href="https://sketchfab.com/3d-models/chest-53e990dc09c646afb6a28a0d29869e5d">Manan Gupta</a></li>
+            <li><strong>barrel</strong> - <a
+                href="https://sketchfab.com/3d-models/lowpoly-stylized-barrel-d5a93eb7724f49c9a0ff0d6dc3186c25">Felipe
+                R.</a></li>
+          </ul>
           <p>
             This website is based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies.github.io source
               code</a>
@@ -336,7 +357,6 @@
           </p>
         </div>
       </div>
-    </div>
     </div>
   </footer>
 
